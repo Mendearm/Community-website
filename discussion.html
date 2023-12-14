@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum</title>
+<link href="https://fonts.googleapis.com/css?family=Bebas Neue"rel="stylesheet"type="text/css"> </link>
+ <link href="https://fonts.googleapis.com/css?family=Rowdies"rel="stylesheet"type="text/css"> </link>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #495159;
+            color: black;
+             }
+
+
+        .forum-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: whitesmoke;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* Header Styles */
+header {
+  background-color: #1A1423;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #30BCED;
+  font-size: 50px;
+  font-family: Bebas Neue;
+}
+h2{
+    font-family: Rowdies;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #30BCED;
+}
+
+        .post {
+            margin-bottom: 20px;
+            border: 1px solid #555; /* Darker Border */
+            background-color: whitesmoke; /* Darker Background for Posts */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .post-author {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .post-content {
+            margin-top: 10px;
+            color: black;
+        }
+
+        .comments {
+            margin-top: 10px;
+        }
+
+        .comment {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #666; /* Darker Border for Comments */
+            border-radius: 3px;
+            background-color: whitesmoke; /* Darker Background for Comments */
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .comment-content {
+            margin-top: 5px;
+            color: black;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        input, textarea, button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #888; /* Darker Border for Form Elements */
+            border-radius: 3px;
+            background-color: #DFDFDF; /* Darker Background for Form Elements */
+            color: black;
+            font-family:Rowdies ;
+        }
+
+        button {
+            background-color: #007BFF;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="forum-container">
+      <header>
+    <h1>Discussion Forum</h1>
+    <nav>
+      <ul>
+        <li><a href="CrimeWatch.html">Home</a></li>
+        <li><a href="CrimeWatch.html">About</a></li>
+        <li><a href="CrimePrevention.html">Crime Prevention</a></li>
+        <li><a href="alert.html">Township Alerts</a></li>
+        <li><a href="#Discussion">Discussion Forum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- Sample Post -->
+    <div class="post">
+        <div class="post-author">User578492: </div>
+        <div class="post-content">
+            <p>What type of lock should I buy when purchasing gate locks for my fences??</p>
+        </div>
+        <div class="comments">
+            <div class="comment">
+                <div class="comment-author">Dave452</div>
+                <div class="comment-content">
+                    <p>Replying to User578492: You should buy a Master lock and a gate latch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-container">
+        <h2>Add a new post:</h2>
+        <form id="postForm" onsubmit="submitPost(event)">
+            <label for="author">Your Name:</label>
+            <input type="text" id="author" name="author" required>
+            <label for="content">Post Content:</label>
+            <textarea id="content" name="content" required></textarea>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>Add a comment:</h2>
+        <form id="commentForm" onsubmit="submitComment(event)">
+            <label for="comment-author">Your Name:</label>
+            <input type="text" id="comment-author" name="comment-author" required>
+            <label for="comment-content">Comment Content:</label>
+            <textarea id="comment-content" name="comment-content" required></textarea>
+            <button type="submit">Comment</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
